@@ -1,0 +1,95 @@
+9a.static binding 
+
+package pavanm;
+public class Exp9a {
+void print()
+{
+System.out.println("in employee class");
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Exp9a ob=new Exp9a();
+ob.print();
+	}
+
+}
+
+
+9b.dynamic binding.
+
+package pavanm;
+
+public class Exp9b {
+void print()
+{
+System.out.println("In person class");
+}
+}
+class student extends Exp9b
+{
+void print()
+{
+System.out.println("in student class");
+}
+}
+class employee extends Exp9b{
+	void print()
+	{
+System.out.println("in employee class");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Exp9b ob1=new student();
+ob1.print();
+Exp9b ob2=new employee();
+ob2.print();
+	}
+}
+
+
+10a. Abstract class to archive abstraction.
+
+package pavanm;
+abstract class demo
+{
+abstract void display(); 
+} 
+public class Exp10a{
+void display() 
+{ 
+System.out.println("Abstract method called"); 
+} 
+public static void main(String[] args) {
+
+Exp10a obj=new Exp10a(); 
+obj.display(); 
+} 
+} 
+
+
+10b.interface to archive abstraction.
+
+package pavanm;
+interface carstart
+{
+	void start();
+
+}
+interface carstop
+{
+	void stop();
+}
+public class Exp10b
+{
+	public void start()
+{
+		System.out.println("car engine has been started");
+}
+	public void stop()
+	{
+		System.out.println("car engine has been stopped");
+}
+	public static void main(String[]args) {
+		Exp10b c =new Exp10b();
+		c.start(); c.stop();
+	}}
